@@ -1,0 +1,128 @@
+/* styling for the unodered list or for the navigation bar */
+ul{
+    margin: 0;
+    padding: 0;
+    /* padding-top: 15px; */
+    list-style: none;
+    height: 60px;
+    line-height: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    /* background-color: rgb(29, 140, 38); */
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+}
+#navbar {
+    overflow: hidden;
+}
+.sticky {
+    position: fixed;
+    /* margin: 0;
+    padding: 0; */
+    background-color: rgb(179, 55, 55);
+    top: 0;
+    width: 100%;
+    transition-duration: 1s;
+}
+/* styling for the lists of the navigation bar */
+li{
+    float: right;
+    position: relative;
+    /* border-right: 2px solid #6699ff; */
+}
+/* styling for the anchor tag of */
+a{
+    display: block;
+    padding: 0 35px;
+    color: #f3f4ef;
+    text-decoration: none;
+}
+/* styling for the anchor tag when it is hovered */
+a:hover, .about-page a{
+    /* background-color: rgb(230, 190, 31); */
+    color: orange;
+
+}
+/* styling in the navigation and text area */
+.main-container{
+    height: 1700px;
+}
+/* styling for entire page this gives margin to the entire page as 0 */
+*{
+    margin: 0;
+}
+/* styling for text area */
+.text-area{
+    background-color:#262626e0;
+    margin-top: 100px;
+    border-radius: 10px;
+    border:2px solid #96f1e2;
+    height: 1450px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: #ffff;
+    padding: 20px;
+    padding-left: 50px;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+}
+/* styling for the underline */
+hr{
+    display: block;
+    margin-top: 0.01em;
+    margin-bottom: 0.5em;
+    border-style:inset;
+}
+/* styling for the div first part of the text area which contains short description and image */
+.first-part{
+    display: flex;
+    background-color: none;
+}
+/* stylin for the address section */
+.intro-address{
+    flex: 50%;
+}
+/* styling for the image in the cv */
+.pic{
+    text-align: right;
+    flex:50%;
+    margin: 20px;
+    padding-right: 100px;
+    /* z-index: 2; */
+    
+}
+/* styling for the skills-list div */
+.skill-list{
+    list-style-type: circle;
+}
+/* end part of the webpage */
+.end-part{
+    background-color:rgba(0, 0, 0, 0.678);
+    margin-top: 300px;
+    color: #ffff;
+    height: 40px;
+    padding-top: 15px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#cursor{
+    height: 50px;
+    width: 50px;
+    background: rgb(148, 241, 56);
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+
+}
+
+div:hover ~ #cursor{
+    transform: scale(0.5);
+}
+

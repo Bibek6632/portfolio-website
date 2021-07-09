@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- this is the head section which is used for title, internal javascript, and to link external javascript -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+
+    <link rel="stylesheet" href="homepage.css">
+
+    <!-- This is the internal css to give styling to the webpage -->
+
+    <style type="text/css">
+    /* this gives styling to the body of webpage */
+        body, html{
+            height: 100%;
+            background: url("image1.jpg");
+            background-size: cover;
+            background-position: 0 0;
+        }
+        /* this gives styling to the toogle text */
+        .slide-text{
+            display: none;
+        }
+        /* this gives styling to the images of the homepage */
+        img{
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            object-fit: cover;
+            cursor: pointer;
+            filter: grayscale(0);
+            transition: filter 1s;
+        }
+        /* this gives styling when cursor is hovered to the image */
+        img:hover{
+            filter: grayscale(1);
+        }
+
+    </style>
+</head>
+<!-- from here starts body section -->
+<body>
+    <!-- this is the main div or container of the home page -->
+    <div class="main-container">
+        <!-- this is the development part of navigation bar -->
+    <nav>
+        <ul>
+            <li class="researchpage"> <a href="research.html"> Research </a>  </li>
+            <li class="contactpage"> <a href="contact.html"> Contact me </a>  </li>
+            <li class="aboutpage"> <a href="aboutme.html"> About me </a>  </li>
+            <li class="blogpage"> <a href="blog.html"> Blog </a> </li>
+            <li class="homepage"> <a href="homepage.html"> Home </a> </li>
+        </ul>
+    </nav>
+    <!-- this div containes image. the one which is circular  -->
+    <div class="img-intro">
+
+        <div class="img">
+            <img src="mypic2.JPG">
+        </div>
+    <!-- this div is the development part of the intro area -->
+    <div class="intro-container">
+        <!-- these are the two texts which toogles -->
+        <div class="slide-text" id="text1"> <h1> <q> Hello, <br> My name is Bivek Bhattarai. I am a BIT student at Itahari International College. I completed my higher secondary (+2) from Vishwa Adarsha College. I am intermediate at java, SQL, web development, and python. </q> </h1> </div>
+        <div class="slide-text" id="text2"> <h1> <q> Namaste,<br> I live in Itahari city and very passionate about web development. To explore this ultimate creation <span Style="color: burlywood">Earth</span> is on my bucket list. If you want to know more about me please feel free to navigate the site.</q> </h1> </div>
+        <!-- this is the java script for the toogle text -->
+        <script type="text/javascript">
+        // this function operates when the toogle button is pressed
+        function toogle(){
+            var t1=document.getElementById("text1");
+            var t2=document.getElementById("text2");
+            // condition for toogle text
+            if(t2.style.display == "none"){
+                t1.style.display = "none";
+                t2.style.display = "block";
+
+            }else{
+
+                t2.style.display = "none";
+                t1.style.display = "block";
+
+            }
+        }
+
+        var t1=document.getElementById("text1");
+        t1.style.display = "block";
+
+        </script>
+        </div>
+
+    </div>
+    <!-- this is the div that contains toogle button -->
+    <div class="toogle-button">
+        <button class="button" onclick="toogle()"> <span> Know More </span> </button>
+    </div>
+    <!-- this is the final part of the home page -->
+    <div class="last-part">
+        <p style="margin-left: 50px;"> © 2021 Bibek Bhattarai, All rights reserved <span style="margin-left: 900px;">np05cp4s210039@iic.edu.np</span> </p>
+    </div>
+    
+    </div>
+    <!-- here the main div called main container closes -->
+
+</body>
+<!-- here body area closes -->
+</html>

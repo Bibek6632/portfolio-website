@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- this is the head section which is used for title, internal javascript, and to link external javascript -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="aboutme.css">
+
+    <!-- This is the internal css to give styling to the webpage -->
+
+    <style type="text/css">
+    /* this gives styling to the body of webpage */
+        body{
+            background-image: url(aboutpage-BG.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        /* this gives styling to the images of the webpage */
+        img{
+            height: 250px;
+            width: 400px;
+            /* border-radius: 50%; */
+            border: 3px solid #ecc957;
+            transition: filter 1s;
+        }
+        /* this gives styling to the image when it is hovered */
+        img:hover{
+            filter: grayscale(1);
+        }
+        
+    </style>
+
+
+</head>
+<!-- head section closes and body section starts here -->
+<body>
+    <!-- this is the div which contains all the elements of the webpage -->
+    <div class="main-container">
+        <!-- this is the development part of the navigation bar -->
+        <nav   id="navbar">
+            <ul class="nav-bar">
+                <li class="menu-lsit"> <a href="research.html"> Research </a>  </li>
+                <li class="menu-lsit"> <a href="contact.html"> Contact me </a>  </li>
+                <li class="about-page"> <a href="aboutme.html"> About me </a>  </li>
+                <li class="menu-lsit"> <a href="blog.html"> Blog </a> </li>
+                <li class="menu-lsit"> <a href="homepage.html"> Home </a> </li>
+            </ul>
+        </nav>
+        
+        <!-- development section for the text area of the webpage -->
+        <div class="text-area">
+
+            <h1 style="margin-bottom: 50px; text-align: center; color: orange;">CV and Portfolio</h1>
+            <!-- div which contains intro the text area -->
+            <div class="first-part">
+                <div class="intro-address">
+                    <h1> Bibek Bhattarai </h1>
+                    <p><strong>Address: </strong> Itahari-4, Sunsari, provience-1, Nepal <br><strong>Phone: </strong> +977-9862221058 <br><strong>Email: </strong>bivekbhattar1@gmail.com <br><strong>College Email: </strong>np05cp4s210039@iic.edu.np <br><strong>London Met ID: </strong>20048416</p>
+                </div>
+                <!-- this div contains intro picture of the cv -->
+                <div class="pic">
+                    <img src="cv-image1.jpg">
+                </div>
+            </div>
+            <!-- this part is the development part of the cv -->
+            <div class="second-part">
+                <br><br> <h2> Professional Summary </h2>
+                <hr>
+                <p> Worked as an online web developer especially as a freelancer</p>
+
+                <br><br> <h2>Education</h2>
+                <hr>
+                <p><strong>Primary education (2008-2017): </strong>  &nbsp <mark>Itahari Model Secondary School.</mark> Completed my 10th standard from This school <br><strong>Higher Secondary education (2018-2020): </strong>  &nbsp <mark>Vishwa Adarsha College</mark>. I completed my +2 form this school <br> <strong>Graduation (2021): </strong> &nbsp<mark>Itahari International College</mark>. Currently, I am studying BSc computing at this university</p>
+
+                <br><br> <h2>Skill Highlights</h2>
+                <hr>
+                <p>1. Java programming<br>2. Web development<br>3. Database management<br>4. Basic hardware knowledge<br>5. Basic python knowledge</p>
+
+                <br><br> <h2>Language Highlights</h2>
+                <hr>
+                <p>1. Nepali - Native<br>2. English - understandable<br>3. Hindi - fluent</p>
+
+                <br><br> <h2>Hobbies</h2>
+                <hr>
+                <p>1. Travelling<br> 2. Sketching<br> 3. Biking<br> 4. cooking<br> 5. photography<br> 6. Music<br> 7. Vloging</p>
+
+
+            </div>
+
+        </div>
+        <!-- this is the div that contains end portion of the webpage -->
+        <div class="end-part">
+            <p>© 2021 Bibek Bhattarai <span>All rights reserved</span></p>
+        </div>
+
+    </div>
+
+    <div id="cursor">
+        <script>
+            var cursor = document.getElementById("cursor");
+
+            document.onmousemove = function(e){
+                cursor.style.left = (e.pageX -25) + "px";
+                cursor.style.top = (e.pageY -25) + "px";
+                cursor.style.display = "block";
+            }
+        </script>
+
+    </div>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction(){
+            if (window.pageYOffset > sticky){
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    <!-- here the main div closes -->
+</body>
+<!-- here body closes -->
+</html>

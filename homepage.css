@@ -1,0 +1,135 @@
+/* styling for the unodered list or for the navigation bar */
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 60px;
+    line-height: 60px;
+    background: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.678);
+}
+/* styling for the lists of the navigation bar */
+li{
+    float: right;
+    border-right: 2px solid #6699ff;
+}
+/* styling for the anchor tag of */
+a{
+    display: block;
+    padding: 0 35px;
+    color:#f3f4ef;
+    text-decoration: none;
+}
+/* styling for the anchor tag when it is hovered */
+a:hover, .homepage a{
+    background-color:rgb(230, 190, 31);
+    color:black;
+}
+/* styling for the main-container div */
+.main-container{
+    color:bisque;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0, 0, 0, 0.486);
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+/* styling for the intro-container div */
+.intro-container{
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    /* background-color: rgba(159, 235, 224, 0.486); */
+    color: white;
+    height: 320px;
+    position:relative;
+    flex: 75%;
+}
+/* styling for the toogle texts*/
+.slide-text{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 80px;
+    padding-right: 80px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* styling for the toogle-buootn div*/
+.toogle-button{
+    text-align: center;
+    left: 50%;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    flex: 5%;
+    
+}
+/* styling for the toogle button*/
+.button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: -10px;
+    border-radius: 7px;
+    border: none;
+    color: #ffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: #f4511e;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+/* styling for the toogle texts*/
+.button span{
+    cursor: pointer;
+    display:inline-block;
+    position:relative;
+    transition: 0.5s;
+}
+/* this is the styling for the span text of the toogle button*/
+.button span:after{
+    content: '\00BB';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -25px;
+    transition: 0.5s;
+}
+/* styling for the span text in the button when hovered*/
+.button:hover span{
+    padding-right: 25px;
+}
+/* styling for the span text in the button after hovering*/
+.button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+/* styling for the the div which contains image and the intro text*/
+.img-intro{
+    display: flex;
+    flex-direction: column;
+}
+/* styling for the images*/
+.img{
+    flex: 20%;
+    /* background-color: rgba(14, 13, 13, 0.452); */
+    margin-left: 100px;
+    margin-right: 100px;
+}
+/* styling for the the last part of the webpage*/
+.last-part{
+    background-color: rgb(14 32 14 / 93%);
+    margin-top: 350px;
+    height: 40px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+}
+/* this gives 0 margins for the whole web page*/
+*{
+    margin:0;
+}
+

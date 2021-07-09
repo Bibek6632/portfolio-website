@@ -1,0 +1,133 @@
+/* styling for the unodered list or for the navigation bar */
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 60px;
+    line-height: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    /* background-color: rgba(0, 0, 0, 0.678); */
+    position: relative;
+    z-index: 2;
+}
+/* styling for the lists of the navigation bar */
+li{
+    float: right;
+    /* border-right: 2px solid #6699ff; */
+}
+/* styling for the anchor tag of */
+a{
+    display: block;
+    padding: 0 35px;
+    color: #f3f4ef;
+    text-decoration: none;
+}
+/* styling for the anchor tag when it is hovered */
+a:hover, .contactpage a{
+    color: rgb(44, 238, 128);
+    /* background-color: rgb(230, 190, 31); */
+
+}
+/* styling in the navigation and text area */
+.main-container{
+    height: 1250px;
+}
+/* styling for text area */
+.text-area{
+    background-color:#262626e0;
+    margin-top: 50px;
+    border-radius: 10px;
+    border:2px solid #13ef0b;
+    height: 1000px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: #ffff;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+/* end part of the webpage */
+.end-part{
+    background-color:rgba(0, 0, 0, 0.678);
+    margin-top: 60px;
+    color: #ffff;
+    height: 40px;
+    padding-top: 15px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* styling for the form container */
+.form-container{
+    border-radius: 5px;
+    background-color: none;
+    padding: 20px;
+    margin-top: 50px;
+    height: 1000px;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* styling for the lavel */
+label{
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* styling for the input area */
+input[type=text], input[type=email], input[type=tel], select, textarea {
+    width: 100%;
+    padding: 12px;
+    color: #000;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    position: relative;
+    z-index: 2;
+}
+/* styling for the input button */
+input[type=button] {
+    background-color: #04aa6d;
+    color: white;
+    font-size: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+/* styling for the input button when hover */
+input[type=button]:hover{
+    background-color: #306f33;
+}
+/* margin for the whole webpage */
+*{
+    margin: 0;
+    
+}
+
+#cursor{
+    height: 50px;
+    width: 50px;
+    background: rgb(148, 241, 56);
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+
+}
+
+div:hover ~ #cursor{
+    transform: scale(0.5);
+}

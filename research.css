@@ -1,0 +1,67 @@
+/* styling for the unodered list or for the navigation bar */
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 60px;
+    line-height: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.678);
+}
+/* styling for the lists of the navigation bar */
+li{
+    float: right;
+    border-right: 2px solid #6699ff;
+}
+/* styling for the anchor tag of */
+a{
+    display: block;
+    padding: 0 35px;
+    color: #f3f4ef;
+    text-decoration: none;
+}
+/* styling for the anchor tag when it is hovered */
+a:hover, .researchpage a{
+    color: black;
+    background-color: rgb(230, 190, 31);
+
+}
+/* styling in the navigation and text area */
+.main-container{
+    height: 2750px;
+}
+/* styling for text area */
+.text-area{
+    background-color:#262626e0;
+    margin-top: 50px;
+    border-radius: 10px;
+    border:2px solid #13ef0b;
+    height: 2500px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: #ffff;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+}
+/* end part of the webpage */
+.end-part{
+    background-color:rgba(0, 0, 0, 0.678);
+    margin-top: 60px;
+    color: #ffff;
+    height: 40px;
+    padding-top: 15px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* margin for the whole body of the webpage */
+*{
+    margin: 0;
+    
+}

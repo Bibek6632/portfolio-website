@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- this is the head section which is used for title, internal javascript, and to link external javascript -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact page</title>
+
+    <link rel="stylesheet" href="contact.css">
+    <!-- This is the internal css to give styling to the webpage -->
+    <style type="text/css">
+    /* styling for the body section of the webpage */
+        body{
+            background-image: url(contactpage-BG.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            cursor: grab;
+        }
+        /* styling for the popup message */
+        .popup-message{
+            display: none;
+            position: fixed;
+            background-color: rgba(3, 3, 3, 0.857);
+            width: 500px;
+            height: 400px;
+            border-radius: 10px;
+            margin-right: 500px;
+            margin-left: 500px;
+            margin-bottom: 150px;
+            padding: 10px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid greenyellow;
+            z-index: 9;
+        }
+        /* styling for the cancel button in the popup message */
+        .popup-message .cancel-btn{
+            background-color: red;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+<!-- head section closes and body section starts here -->
+<body>
+    <!-- this is the div which contains all the elements of the webpage -->
+    <div class="main-container">
+        <!-- this is the development part of the navigation bar -->
+        <nav>
+            <ul>
+                <li class="researchpage"> <a href="research.html"> Research </a>  </li>
+                <li class="contactpage"> <a href="contact.html"> Contact me </a>  </li>
+                <li class="aboutpage"> <a href="aboutme.html"> About me </a>  </li>
+                <li class="blogpage"> <a href="blog.html"> Blog </a> </li>
+                <li class="homepage"> <a href="homepage.html"> Home </a> </li>
+            </ul>
+        </nav>
+        <!-- development of the text area of the webpage -->
+        <div class="text-area">
+            <h1>Contact Form</h1>
+            <hr>
+            <!-- styling for the form  -->
+            <div class="form-container">
+                <form id="form">
+
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="fname" name="FirstName" placeholder="First Name">
+
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="lname" name="LastName" placeholder="Last Name">
+
+                    <label for="country">Country</label>
+                    <select id="country" name="country" placeholder="choose your country">
+                    <option value="choose">Choose your country</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Germany">Germany</option>
+                    <option value="srilanka">Sri Lanka</option>
+                    <option value="china">China</option>
+                    <option value="France">France</option>
+                    <option value="USA">USA</option>
+                    </select>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="write your email address" required>
+
+                    <label for="Phone-number" >Phone Number</label>
+                    <input type="tel" id="pnumber" name="phone-number" placeholder=" pattern 123-456-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+                    <label for="message">Write some message</label>
+                    <textarea id="message" name="message" rows="4" cols="10" placeholder="Write some message....." Style="height: 200px; font-size: 20px;">
+                    </textarea>
+
+                    <input type="button" value="Submit" id="validate" onclick=" return openPopup()">
+
+                    <div class="popup-message" id="popup"><h1>Message !!</h1><p style="color: #fff">Thank you for submitting your details, I will contact you  shortly. If possible within a week.<br>Have a nice day !<br>Bye</p>
+                        <button type="button" class="cancel-btn" onclick="closePopup()">Close</button>
+                    </div>
+
+                    <div class="popup-message" id="rem"><h1>Alert Message !!</h1> <p style="color:#ffff"> <br>Your have not given your email and phone number, so please give your email and phone number so that I can contact you for the business purposes</p>
+                        <button type="button" class="cancel-btn" onclick="closeReminder()">Close</button>
+                    </div>
+                    <!-- java script for the popup message -->
+                    <script>
+                        // this function operates when the submmit button is pressed
+                        function openPopup(){
+
+                            if(document.getElementById("pnumber").value=="" || document.getElementById("pnumber").value==""){
+                                document.getElementById("rem").style.display = "block";
+                                return false;
+                                
+                            }else{
+                                document.getElementById("popup").style.display = "block";
+                                document.getElementById("form").reset();
+                                return true;
+
+                            }
+                        }
+                        // this function operates when the cancel button is pressed
+                        function closePopup(){
+                            document.getElementById("popup").style.display = "none";
+                        }
+
+                        function closeReminder(){
+                            document.getElementById("rem").style.display = "none";
+                        }
+                    
+                    </script>
+
+                </form>
+
+            </div>
+
+        </div>
+        <!-- this is the div which contains the end portion of the webpage -->
+        <div class="end-part">
+            <p style="font-size: 16px;">© 2021 Bibek Bhattarai | All rights reserved</p>
+        </div>
+    </div>
+
+    <div id="cursor">
+        <script>
+            var cursor = document.getElementById("cursor");
+
+            document.onmousemove = function(e){
+                cursor.style.left = (e.pageX -25) + "px";
+                cursor.style.top = (e.pageY -25) + "px";
+                cursor.style.display = "block";
+            }
+        </script>
+
+    </div>
+
+</body>
+</html>
